@@ -6,7 +6,7 @@
 /*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 15:04:27 by briffard          #+#    #+#             */
-/*   Updated: 2021/11/26 13:39:36 by briffard         ###   ########.fr       */
+/*   Updated: 2021/11/30 11:44:59 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ static	int	compteurdemots(char const *s, char	c)
 
 	i = 0;
 	count = 0;
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		if (s[i] == c)
 			i++;
 		else
 		{
-			while (s[i] != c && s[i] != '\0')
+			while (s[i] != c && s[i])
 				i++;
 			count++;
 		}
@@ -46,33 +46,47 @@ static	int	countletters(char const	*s, int	i, char	c)
 	return (count);
 }
 
-char	**ft_strsplit(char const	*s, char	c)
+static	char	**cpyarr(char	**dest, char const	*s, char	c)
 {
-	int		j;
-	char	**dest;
-	int		i;
-	int		z;
+	int	i;
+	int	j;
+	int	z;
 
-	j = 0;
 	i = 0;
-	if(!s)
-		return(NULL);
-	dest = (char **)malloc(sizeof(char *) * (compteurdemots(s, c) + 1));
-	if (!dest)
-		return (NULL);
+	j = 0;
 	while (s[i] != '\0')
 	{
 		while (s[i] == c)
 			i++;
-		dest[j] = (char *)malloc(sizeof(char) * (countletters(s, i, c) + 1));
-		if (!dest[j])
-			return (ft_cleanstr(dest, j));
-		z = 0;
-		while (s[i] != c && s[i] != '\0')
-			dest[j][z++] = s[i++];
-		dest[j++][z] = '\0';
-		//i++;
+		if (s[i] != c && s[i])
+		{
+			dest[j] = (char *)malloc(sizeof(char) * countletters(s, i, c) + 1 );
+			if (!dest[j])
+				return (ft_cleanstr(dest, j));
+			z = 0;
+			while (s[i] != c && s[i] != '\0')
+				dest[j][z++] = s[i++];
+			dest[j][z] = '\0';
+			j++;
+		}
 	}
 	dest[j] = 0;
 	return (dest);
+}
+
+char	**ft_strsplit(char const	*s, char	c)
+{
+	char	**dest;
+
+	if (!s)
+		return (NULL);
+	dest = (char **)malloc(sizeof(char *) * (compteurdemots(s, c)) + 1);
+	if (!dest)
+		return (NULL);
+	if (compteurdemots(s, c) == 0)
+	{
+		dest[0] = 0;
+		return (dest);
+	}
+	return (cpyarr(dest, s, c));
 }

@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 14:09:07 by briffard          #+#    #+#             */
-/*   Updated: 2021/11/29 12:16:38 by briffard         ###   ########.fr       */
+/*   Created: 2021/11/12 12:16:48 by briffard          #+#    #+#             */
+/*   Updated: 2021/11/29 13:17:14 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	ft_striter(char	*s, void (*f)(char *))
 {
-	if (ft_isdigit(c) || ft_isalpha(c))
-		return (1);
-	else
-		return (0);
+	unsigned int	i;
+
+	i = 0;
+	if (s != NULL)
+	{
+		while (s[i] != '\0')
+		{
+			(*f)(&s[i]);
+			i++;
+		}
+	}
 }

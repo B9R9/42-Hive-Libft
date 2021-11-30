@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 14:09:07 by briffard          #+#    #+#             */
-/*   Updated: 2021/11/29 12:16:38 by briffard         ###   ########.fr       */
+/*   Created: 2021/11/12 13:18:08 by briffard          #+#    #+#             */
+/*   Updated: 2021/11/29 13:16:09 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-int	ft_isalnum(int c)
+int	ft_strequ(char const *s1, char const	*s2)
 {
-	if (ft_isdigit(c) || ft_isalpha(c))
+	if (!s1 || !s2)
+		return (0);
+	if (ft_strcmp(s1, s2) == 0)
 		return (1);
 	else
 		return (0);

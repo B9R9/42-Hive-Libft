@@ -6,7 +6,7 @@
 /*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:32:10 by briffard          #+#    #+#             */
-/*   Updated: 2021/11/24 08:49:26 by briffard         ###   ########.fr       */
+/*   Updated: 2021/11/29 13:21:46 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnew(size_t size)
 
 	i = 0;
 	str = (char *)malloc((sizeof(char) * size) + 1);
-	if(str == NULL)
+	if (str == NULL)
 		return (NULL);
 	while (i < size)
 	{

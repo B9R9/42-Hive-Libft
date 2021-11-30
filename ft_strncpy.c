@@ -6,7 +6,7 @@
 /*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 16:11:03 by briffard          #+#    #+#             */
-/*   Updated: 2021/11/23 13:40:41 by briffard         ###   ########.fr       */
+/*   Updated: 2021/11/29 13:20:26 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ char	*ft_strncpy(char	*dst, const char	*src, size_t	len)
 	unsigned int	i;
 
 	i = 0;
-	while(src[i] != '\0' && i < len)
+	while (src[i] != '\0' && i < len)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	while(i < len)
+	while (i < len)
 	{
 		dst[i] = '\0';
 		i++;

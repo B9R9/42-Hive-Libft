@@ -6,7 +6,7 @@
 /*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 10:26:15 by briffard          #+#    #+#             */
-/*   Updated: 2021/11/26 07:51:48 by briffard         ###   ########.fr       */
+/*   Updated: 2021/11/29 12:56:15 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ int	ft_strcmp(const char	*s1, const char	*s2)
 		s1++;
 		s2++;
 	}
-	return (* (unsigned char *)s1 - *(unsigned char *)s2);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }

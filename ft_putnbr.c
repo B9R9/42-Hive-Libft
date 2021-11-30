@@ -6,7 +6,7 @@
 /*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 11:44:26 by briffard          #+#    #+#             */
-/*   Updated: 2021/11/17 16:02:40 by briffard         ###   ########.fr       */
+/*   Updated: 2021/11/29 13:11:31 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ void	ft_putnbr(int	n)
 		ft_putstr("-2");
 		ft_putnbr(147483648);
 	}
-	else if(n < 0)
+	else if (n < 0)
 	{
 		ft_putchar('-');
 		ft_putnbr(-n);
 	}
 	else
 	{
-		if(n > 9)
+		if (n > 9)
 			ft_putnbr(n / 10);
 		ft_putchar((n % 10) + '0');
 	}

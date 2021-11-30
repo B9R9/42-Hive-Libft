@@ -6,7 +6,7 @@
 /*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:01:51 by briffard          #+#    #+#             */
-/*   Updated: 2021/11/26 10:05:01 by briffard         ###   ########.fr       */
+/*   Updated: 2021/11/29 13:02:49 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putstr_fd(char const	*s, int	fd)
 {
-	if(s)
-		write(fd, s, ft_strlen(s));
+	if (s)
+		write (fd, s, ft_strlen(s));
 }

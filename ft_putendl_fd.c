@@ -6,7 +6,7 @@
 /*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 12:03:16 by briffard          #+#    #+#             */
-/*   Updated: 2021/11/26 10:03:31 by briffard         ###   ########.fr       */
+/*   Updated: 2021/11/29 13:02:04 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char const	*s, int	fd)
 {
-	if(s)
+	if (s)
 	{
 		ft_putstr_fd(s, fd);
 		ft_putchar_fd('\n', fd);

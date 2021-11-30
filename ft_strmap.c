@@ -6,7 +6,7 @@
 /*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 15:00:49 by briffard          #+#    #+#             */
-/*   Updated: 2021/11/25 16:35:45 by briffard         ###   ########.fr       */
+/*   Updated: 2021/11/29 13:18:22 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ char	*ft_strmap(char const	*s, char	(*f)(char))
 {
 	char			*map;
 	unsigned int	i;
-	
-	if(!s)
-		return(NULL);
+
+	if (!s)
+		return (NULL);
 	i = 0;
 	map = ft_strdup(s);
 	if (!map || !s || !f)
