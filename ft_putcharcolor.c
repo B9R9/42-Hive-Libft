@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*   ft_putcharcolor.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 13:49:11 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/01 13:53:19 by briffard         ###   ########.fr       */
+/*   Created: 2021/12/07 12:54:53 by briffard          #+#    #+#             */
+/*   Updated: 2021/12/07 13:01:30 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char	c)
+void	ft_putcharcolor(char c, char *color)
 {
-	if (c == ' ' || (c >= '\t' && c <= '\r'))
-		return (1);
-	else
-		return (0);
+	ft_color(color);
+	ft_putchar(c);
+	ft_color("normal");
 }

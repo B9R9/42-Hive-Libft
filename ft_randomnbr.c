@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*   ft_randomnbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 13:49:11 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/01 13:53:19 by briffard         ###   ########.fr       */
+/*   Created: 2021/12/01 14:42:02 by briffard          #+#    #+#             */
+/*   Updated: 2021/12/07 15:12:35 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char	c)
+int	ft_randomnbr()
 {
-	if (c == ' ' || (c >= '\t' && c <= '\r'))
-		return (1);
-	else
-		return (0);
+	/*function need to take int n. n will be the total of len arr name function level i.*/
+	srand(time(NULL));
+	int	nbr;
+	int	min;
+	int	max;
+
+	min = 1;
+	max = 100;
+	nbr = (rand()%(max - min + 1 )) + min;
+	return (nbr);
 }

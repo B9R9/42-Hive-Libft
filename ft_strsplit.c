@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/19 15:04:27 by briffard          #+#    #+#             */
-/*   Updated: 2021/11/30 11:44:59 by briffard         ###   ########.fr       */
+/*   Created: 2021/12/01 14:06:57 by briffard          #+#    #+#             */
+/*   Updated: 2021/12/03 09:21:47 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-static	int	compteurdemots(char const *s, char	c)
+static	int	countwords(char const *s, char	c)
 {
 	int	i;
 	int	count;
@@ -80,10 +80,10 @@ char	**ft_strsplit(char const	*s, char	c)
 
 	if (!s)
 		return (NULL);
-	dest = (char **)malloc(sizeof(char *) * (compteurdemots(s, c)) + 1);
+	dest = (char **)malloc(sizeof(char *) * (countwords(s, c)) + 1);
 	if (!dest)
 		return (NULL);
-	if (compteurdemots(s, c) == 0)
+	if (countwords(s, c) == 0)
 	{
 		dest[0] = 0;
 		return (dest);

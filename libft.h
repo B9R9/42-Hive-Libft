@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 08:13:24 by briffard          #+#    #+#             */
-/*   Updated: 2021/11/30 08:45:52 by briffard         ###   ########.fr       */
+/*   Created: 2021/12/01 14:08:45 by briffard          #+#    #+#             */
+/*   Updated: 2021/12/07 15:11:53 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,21 @@
 # define LIBFT_H
 
 # include<unistd.h>
-# include<ctype.h>
 # include<stdlib.h>
-# include<stdio.h>
 # include<string.h>
-# include<fcntl.h>
+# include<time.h>
+
+/*DEFINE*/
+
+#define NORMAL	"\x1B[0m"
+#define RED		"\x1B[31m"
+#define GREEN	"\x1B[32m"
+#define YELLOW	"\x1B[33m"
+#define BLUE	"\x1B[34m"
+#define MAGENTA	"\x1B[35m"
+#define CYAN	"\x1B[36m"
+#define WHITE	"\x1B[37m"
+
 
 typedef struct s_list
 {
@@ -47,7 +57,7 @@ char		*ft_strcpy(char	*dst, const char	*src);
 char		*ft_strdup(const char	*s1);
 char		*ft_strncat(char	*s1, char	*s2, size_t	n);
 char		*ft_strncpy(char	*dst, const char	*src, size_t	len);
-char		*ft_strnstr(const char	*haystack, const char	*needle, size_t	len);
+char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strrchr(const char	*s, int	c);
 char		*ft_strstr(const	char *haystack, const char	*needle);
 char		*ft_strtrim(char const	*s);
@@ -87,7 +97,17 @@ void		*ft_memcpy(void	*dest, const void	*src, size_t	n);
 void		*ft_memset(void	*s, int	c, size_t	n);
 void		ft_bzero(void	*s, size_t	n);
 int			ft_memcmp(const void	*s1, const void	*s2, size_t	n);
+/*BONUS FUNCTIONS*/
+t_list		*ft_lstnew(void const *content, size_t content_size);
+void		ft_lstadd(t_list **alst, t_list *new);
+void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+
 /*EXTRA FUNCTION*/
 void		*ft_cleanstr(char	**s, size_t	i);
 int			ft_isspace(char	c);
+void		ft_color(char *s);
+void		ft_putstrcolor(char *str, char *color);
+void		ft_putcharcolor(char c, char *color);
+int			ft_randomnbr();
 #endif
