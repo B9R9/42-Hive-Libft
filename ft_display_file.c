@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_randomnbr.c                                     :+:      :+:    :+:   */
+/*   ft_display_file.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 14:42:02 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/23 09:04:07 by briffard         ###   ########.fr       */
+/*   Created: 2021/12/13 09:44:51 by briffard          #+#    #+#             */
+/*   Updated: 2021/12/23 09:04:27 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_randomnbr(void)
+void	ft_display_file(int fd)
 {
-	int	nbr;
-	int	min;
-	int	max;
+	char	*buf;
 
-	min = 1;
-	max = 100;
-	srand((time(NULL)));
-	nbr = (rand() % (max - min + 1)) + min;
-	return (nbr);
+	while (read(fd, &buf, 1))
+		write(1, &buf, 1);
 }

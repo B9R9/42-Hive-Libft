@@ -6,7 +6,7 @@
 #    By: briffard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 08:08:13 by briffard          #+#    #+#              #
-#    Updated: 2021/12/07 15:06:55 by briffard         ###   ########.fr        #
+#    Updated: 2021/12/13 09:48:19 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ FILES=	ft_putchar.c	ft_putchar_fd.c		ft_putendl.c		ft_tolower.c\
 		ft_strsplit.c	ft_cleanstr.c		ft_lstnew.c			ft_lstadd.c	\
 		ft_lstdelone.c	ft_lstdel.c			ft_color.c						\
 		ft_putstrcolor.c					ft_putcharcolor.c				\
-		ft_randomnbr.c \
+		ft_randomnbr.c 	ft_display_file.c\
 
 OBJ=$(SRC:.c=.o)
 RM=rm -f
