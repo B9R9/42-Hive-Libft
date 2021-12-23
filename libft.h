@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:08:45 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/07 15:11:53 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/23 09:06:46 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@
 # include<unistd.h>
 # include<stdlib.h>
 # include<string.h>
+# include<fcntl.h>
 # include<time.h>
 
 /*DEFINE*/
 
-#define NORMAL	"\x1B[0m"
-#define RED		"\x1B[31m"
-#define GREEN	"\x1B[32m"
-#define YELLOW	"\x1B[33m"
-#define BLUE	"\x1B[34m"
-#define MAGENTA	"\x1B[35m"
-#define CYAN	"\x1B[36m"
-#define WHITE	"\x1B[37m"
-
+# define NORMAL	"\x1B[0m"
+# define RED		"\x1B[31m"
+# define GREEN	"\x1B[32m"
+# define YELLOW	"\x1B[33m"
+# define BLUE	"\x1B[34m"
+# define MAGENTA	"\x1B[35m"
+# define CYAN	"\x1B[36m"
+# define WHITE	"\x1B[37m"
 
 typedef struct s_list
 {
@@ -109,5 +109,6 @@ int			ft_isspace(char	c);
 void		ft_color(char *s);
 void		ft_putstrcolor(char *str, char *color);
 void		ft_putcharcolor(char c, char *color);
-int			ft_randomnbr();
+int			ft_randomnbr(void);
+void		ft_display_file(int fd);
 #endif
