@@ -6,13 +6,13 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:57:18 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/01 13:57:22 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/27 12:22:58 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char	c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }

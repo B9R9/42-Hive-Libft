@@ -6,13 +6,13 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:54:07 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/01 13:54:11 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/27 12:23:48 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-static int	ft_numlenght(long	n)
+static int	ft_numlenght(long n)
 {
 	int	count;
 
@@ -30,7 +30,7 @@ static int	ft_numlenght(long	n)
 	return (count);
 }
 
-char	*ft_itoa(int	n)
+char	*ft_itoa(int n)
 {
 	long	k;
 	int		i;

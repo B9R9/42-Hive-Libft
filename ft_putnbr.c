@@ -6,13 +6,13 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:58:55 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/01 13:59:01 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/27 12:19:24 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void	ft_putnbr(int	n)
+void	ft_putnbr(int n)
 {
 	if (n == -2147483648)
 	{

@@ -6,13 +6,13 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:06:57 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/03 09:21:47 by briffard         ###   ########.fr       */
+/*   Updated: 2021/12/27 12:16:42 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-static	int	countwords(char const *s, char	c)
+static	int	countwords(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -33,7 +33,7 @@ static	int	countwords(char const *s, char	c)
 	return (count);
 }
 
-static	int	countletters(char const	*s, int	i, char	c)
+static	int	countletters(char const *s, int i, char c)
 {
 	int	count;
 
@@ -46,7 +46,7 @@ static	int	countletters(char const	*s, int	i, char	c)
 	return (count);
 }
 
-static	char	**cpyarr(char	**dest, char const	*s, char	c)
+static	char	**cpyarr(char **dest, char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -60,7 +60,7 @@ static	char	**cpyarr(char	**dest, char const	*s, char	c)
 			i++;
 		if (s[i] != c && s[i])
 		{
-			dest[j] = (char *)malloc(sizeof(char) * countletters(s, i, c) + 1 );
+			dest[j] = (char *)malloc(sizeof(char) * countletters(s, i, c) + 1);
 			if (!dest[j])
 				return (ft_cleanstr(dest, j));
 			z = 0;
@@ -74,7 +74,7 @@ static	char	**cpyarr(char	**dest, char const	*s, char	c)
 	return (dest);
 }
 
-char	**ft_strsplit(char const	*s, char	c)
+char	**ft_strsplit(char const *s, char c)
 {
 	char	**dest;
 
