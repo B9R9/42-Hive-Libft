@@ -6,11 +6,11 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:03:26 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/01 14:03:30 by briffard         ###   ########.fr       */
+/*   Updated: 2022/01/07 09:44:25 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 char	*ft_strjoin(char const	*s1, char const	*s2)
 {

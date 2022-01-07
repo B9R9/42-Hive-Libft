@@ -6,11 +6,11 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:48:58 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/01 13:49:01 by briffard         ###   ########.fr       */
+/*   Updated: 2022/01/07 09:31:23 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

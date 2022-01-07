@@ -6,11 +6,11 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:54:41 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/01 13:54:47 by briffard         ###   ########.fr       */
+/*   Updated: 2022/01/07 09:33:44 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 void	*ft_memccpy(void	*dest, const void	*src, int c, size_t n)
 {

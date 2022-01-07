@@ -6,11 +6,11 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:01:43 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/03 08:25:41 by briffard         ###   ########.fr       */
+/*   Updated: 2022/01/07 09:42:48 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 char	*ft_strcpy(char	*dst, const char	*src)
 {

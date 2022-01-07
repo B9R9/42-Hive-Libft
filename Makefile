@@ -6,7 +6,7 @@
 #    By: briffard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 08:08:13 by briffard          #+#    #+#              #
-#    Updated: 2021/12/13 09:48:19 by briffard         ###   ########.fr        #
+#    Updated: 2022/01/07 09:50:52 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,8 @@ FILES=	ft_putchar.c	ft_putchar_fd.c		ft_putendl.c		ft_tolower.c\
 		ft_putstrcolor.c					ft_putcharcolor.c				\
 		ft_randomnbr.c 	ft_display_file.c\
 
+INCL=./includes/
+
 OBJ=$(SRC:.c=.o)
 RM=rm -f
 CC=gcc
@@ -39,7 +41,7 @@ all: $(NAME)
 
 $(NAME):
 	@echo "Compiling..."
-	$(CC) $(CCFLAGS) -c $(FILES)
+	$(CC) $(CCFLAGS) -I $(INCL)  -c $(FILES)
 	@echo "Creation of libft"
 	ar rc $(NAME) *.o
 	@echo "Libft created."
@@ -51,4 +53,4 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean all
+re: fclean all clean

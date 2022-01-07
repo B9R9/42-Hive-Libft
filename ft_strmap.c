@@ -6,11 +6,11 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:04:33 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/27 12:17:06 by briffard         ###   ########.fr       */
+/*   Updated: 2022/01/07 09:45:22 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {

@@ -6,11 +6,11 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:54:24 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/01 13:54:28 by briffard         ###   ########.fr       */
+/*   Updated: 2022/01/07 09:33:28 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 void	*ft_memalloc(size_t	size)
 {

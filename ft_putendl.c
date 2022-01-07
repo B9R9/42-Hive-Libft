@@ -6,11 +6,11 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:57:59 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/27 12:19:48 by briffard         ###   ########.fr       */
+/*   Updated: 2022/01/07 09:36:39 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 void	ft_putendl(char const *s)
 {

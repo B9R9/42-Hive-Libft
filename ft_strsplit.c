@@ -6,11 +6,11 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:06:57 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/27 12:16:42 by briffard         ###   ########.fr       */
+/*   Updated: 2022/01/07 09:47:59 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 static	int	countwords(char const *s, char c)
 {

@@ -6,11 +6,11 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 13:54:07 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/27 12:23:48 by briffard         ###   ########.fr       */
+/*   Updated: 2022/01/07 09:31:55 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 static int	ft_numlenght(long n)
 {
