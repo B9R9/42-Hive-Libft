@@ -6,11 +6,11 @@
 /*   By: briffard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/22 11:52:18 by briffard          #+#    #+#             */
-/*   Updated: 2022/01/18 10:50:57 by briffard         ###   ########.fr       */
+/*   Updated: 2022/01/18 11:14:47 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 static int	ft_print_line(char **str, char **line)
 {
