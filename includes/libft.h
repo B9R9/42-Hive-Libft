@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:08:45 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/27 12:27:56 by briffard         ###   ########.fr       */
+/*   Updated: 2022/01/18 10:53:25 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include<time.h>
 
 /*DEFINE*/
-
+/*COLOR*/
 # define NORMAL	"\x1B[0m"
 # define RED		"\x1B[31m"
 # define GREEN	"\x1B[32m"
@@ -29,6 +29,10 @@
 # define MAGENTA	"\x1B[35m"
 # define CYAN	"\x1B[36m"
 # define WHITE	"\x1B[37m"
+
+/*DEFINE GNL*/
+# define BUFF_SIZE 8
+# define FD_SIZE 4096
 
 typedef struct s_list
 {
@@ -111,4 +115,6 @@ void		ft_putstrcolor(char *str, char *color);
 void		ft_putcharcolor(char c, char *color);
 int			ft_randomnbr(void);
 void		ft_display_file(int fd);
+int			get_next_line(const int fd, char **line);
+
 #endif
