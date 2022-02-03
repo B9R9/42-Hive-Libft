@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:08:45 by briffard          #+#    #+#             */
-/*   Updated: 2022/01/18 10:53:25 by briffard         ###   ########.fr       */
+/*   Updated: 2022/02/03 19:17:28 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,29 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef enum
+{
+	false,
+	true
+}t_bool;
+
+/*Node for double list*/
+typedef struct s_dlistnode
+{
+	int	value;
+	struct	s_dlistnode	*back;
+	struct	s_dlistnode	*next;
+}				t_dlistnode;
+
+/*definition of the double chained list*/
+typedef struct s_dlist
+{
+	int length;
+	struct	s_dlistnode *begin;
+	struct	s_dlistnode *end;
+}*dlist;
+
+
 /*FT_STR FUNCTION*/
 /*RETURN INT*/
 int			ft_strcmp(const char	*s1, const char	*s2);
@@ -71,7 +94,7 @@ char		*ft_strmapi(char const	*s, char (*f)(unsigned int, char));
 char		*ft_strnew(size_t size);
 char		*ft_strjoin(char const	*s1, char const	*s2);
 char		**ft_strsplit(char const *s, char c);
-/*FT_ TO FUNCTION*/
+/*FT_ TO FUNCION*/
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 int			ft_atoi(const char *str);
@@ -116,5 +139,17 @@ void		ft_putcharcolor(char c, char *color);
 int			ft_randomnbr(void);
 void		ft_display_file(int fd);
 int			get_next_line(const int fd, char **line);
+
+/*DOUBLE LINK LIST*/
+dlist		new_dlist(void);
+t_bool		is_empty_dlist(dlist li);
+int			dlist_length(dlist li);
+int			dlist_first(dlist li);
+int			dlist_end(dlist li);
+dlist		push_back_dlist(dlist li, int x);
+dlist		push_front_dlist(dlist li, int x);
+dlist		pop_back_dlist(dlist li);
+dlist		pop_front_dlist(dlist li);
+void		print_dlist(dlist li);
 
 #endif

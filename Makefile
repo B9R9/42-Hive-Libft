@@ -6,7 +6,7 @@
 #    By: briffard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/16 08:08:13 by briffard          #+#    #+#              #
-#    Updated: 2022/01/18 10:39:56 by briffard         ###   ########.fr        #
+#    Updated: 2022/02/03 19:25:58 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,10 @@ FILES=	ft_putchar.c	ft_putchar_fd.c		ft_putendl.c		ft_tolower.c\
 		ft_strsplit.c	ft_cleanstr.c		ft_lstnew.c			ft_lstadd.c	\
 		ft_lstdelone.c	ft_lstdel.c			ft_color.c						\
 		ft_putstrcolor.c					ft_putcharcolor.c				\
-		ft_randomnbr.c 	ft_display_file.c	get_next_line.c\
+		ft_randomnbr.c 	ft_display_file.c	get_next_line.c		newdlist.c	\
+		is_empty_dlist.c	dlist_length.c		dlist_first_end.c			\
+		push_back_dlist.c	push_front_dlist.c	pop_back_dlist.c			\
+		pop_front_dlist.c 	print_dlist.c\
 
 INCL=./includes/
 
@@ -41,11 +44,11 @@ all: $(NAME)
 
 $(NAME):
 	@echo "Compiling..."
-	$(CC) $(CCFLAGS) -I $(INCL)  -c $(FILES)
+	@$(CC) $(CCFLAGS) -I $(INCL) -c $(FILES)
 	@echo "Creation of libft"
-	ar rc $(NAME) *.o
+	@ar rc $(NAME) *.o
 	@echo "Libft created."
-	ranlib $(NAME)
+	@ranlib $(NAME)
 
 clean:
 	$(RM) *.o
