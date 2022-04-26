@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_dlist.c                                      :+:      :+:    :+:   */
+/*   ft_charjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/03 19:06:52 by briffard          #+#    #+#             */
-/*   Updated: 2022/02/03 19:31:30 by briffard         ###   ########.fr       */
+/*   Created: 2022/04/01 14:11:06 by briffard          #+#    #+#             */
+/*   Updated: 2022/04/23 16:45:49 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-void		print_dlist(dlist li)
+char	*ft_charjoin(char c, char *dest)
 {
-	t_dlistnode		*temp;
+	char	*temp;
 
-	if (is_empty_dlist(li))
-	{
-		ft_putstr("Nothing to print. Empty list\n");
-	return;
-	}
-	temp = li->begin;
-	while(temp->next != NULL)
-	{
-		ft_putnbr(temp->value);
-		ft_putchar('\n');
-		temp = temp-> next;
-	}
-	ft_putchar('\n');
+	temp = ft_strjoin(" ", dest);
+	if (!temp)
+		return (NULL);
+	temp[0] = c;
+	ft_memdel ((void **)&dest);
+	dest = temp;
+	return (dest);
 }

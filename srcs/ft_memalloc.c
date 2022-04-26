@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 13:55:41 by briffard          #+#    #+#             */
-/*   Updated: 2022/01/07 09:34:17 by briffard         ###   ########.fr       */
+/*   Created: 2021/12/01 13:54:24 by briffard          #+#    #+#             */
+/*   Updated: 2022/04/12 16:57:32 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void	*dest, const void	*src, size_t n)
+void	*ft_memalloc(size_t	size)
 {
-	size_t			i;
-	unsigned char	*p;
-	unsigned char	*s;
+	unsigned char	*arr;
 
-	if (!src && !dest)
+	arr = (unsigned char *)malloc(size);
+	if (arr == NULL)
 		return (NULL);
-	s = (unsigned char *) src;
-	p = (unsigned char *) dest;
-	i = 0;
-	while (i < n)
-	{
-		p[i] = s[i];
-		i++;
-	}
-	dest = (unsigned char *)p;
-	return (dest);
+	ft_bzero(arr, size);
+	return (arr);
 }

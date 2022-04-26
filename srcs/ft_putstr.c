@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_empty_dlist.c                                   :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/03 17:49:17 by briffard          #+#    #+#             */
-/*   Updated: 2022/02/03 17:51:09 by briffard         ###   ########.fr       */
+/*   Created: 2021/12/01 13:59:37 by briffard          #+#    #+#             */
+/*   Updated: 2022/04/14 08:38:03 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	is_empty_dlist(dlist li)
+void	ft_putstr(char const *s)
 {
-	if (li == NULL)
-		return (true);
-	return (false);
+	if (s != NULL)
+		write (1, s, ft_strlen(s));
 }

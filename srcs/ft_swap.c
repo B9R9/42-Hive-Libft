@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 14:02:22 by briffard          #+#    #+#             */
-/*   Updated: 2022/01/07 09:43:21 by briffard         ###   ########.fr       */
+/*   Created: 2022/03/22 09:41:55 by briffard          #+#    #+#             */
+/*   Updated: 2022/04/23 17:12:11 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const	char *s1)
+void	ft_swap(char *a, char *b)
 {
-	int		i;
-	char	*dest;
+	char	swap;
 
-	i = 0;
-	dest = (char *) malloc(sizeof(char) * ft_strlen(s1) + 1);
-	if (!dest)
-		return (NULL);
-	while (s1[i] != '\0')
-	{
-		dest[i] = s1[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	swap = *a;
+	*a = *b;
+	*b = swap;
 }

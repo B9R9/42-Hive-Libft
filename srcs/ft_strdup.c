@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 14:00:06 by briffard          #+#    #+#             */
-/*   Updated: 2022/01/07 09:41:48 by briffard         ###   ########.fr       */
+/*   Created: 2021/12/01 14:02:22 by briffard          #+#    #+#             */
+/*   Updated: 2022/04/25 09:45:50 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char	*s1, char	*s2)
+char	*ft_strdup(const char *s1)
 {
-	unsigned int	len;
-	unsigned int	i;
+	char	*dup;
+	int		i;
 
-	len = ft_strlen(s1);
 	i = 0;
-	while (s2[i] != '\0')
-		s1[len++] = s2[i++];
-	s1[len] = '\0';
-	return (s1);
+	dup = ft_strnew(ft_strlen(s1));
+	if (!dup)
+		return (NULL);
+	while (s1[i] != '\0')
+	{
+		dup[i] = s1[i];
+		i++;
+	}
+	return (dup);
 }

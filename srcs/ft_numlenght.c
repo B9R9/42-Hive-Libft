@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dlist_first.c                                      :+:      :+:    :+:   */
+/*   ft_numlenght.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/03 18:20:04 by briffard          #+#    #+#             */
-/*   Updated: 2022/02/03 18:24:58 by briffard         ###   ########.fr       */
+/*   Created: 2022/03/18 09:47:44 by briffard          #+#    #+#             */
+/*   Updated: 2022/03/31 16:05:48 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-int		dlist_first(dlist li)
+unsigned long long int	ft_numlenght(unsigned long long int n)
 {
-	if (is_empty_dlist(li))
-		exit(1);
-	return li->begin->value;
-}
+	unsigned long long	count;
 
-int		dlist_end(dlist li)
-{
-	if (is_empty_dlist(li))
-		exit(1);
-	return li->end->value;
+	count = 0;
+	while (n > 0)
+	{
+		n = n / 10;
+		count++;
+	}
+	return (count);
 }

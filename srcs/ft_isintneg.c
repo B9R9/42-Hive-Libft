@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isintneg.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 14:01:43 by briffard          #+#    #+#             */
-/*   Updated: 2022/01/07 09:42:48 by briffard         ###   ########.fr       */
+/*   Created: 2022/04/23 16:48:08 by briffard          #+#    #+#             */
+/*   Updated: 2022/04/23 16:49:08 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char	*dst, const char	*src)
+t_bool	ft_isintneg(long long int number)
 {
-	int	i;
-
-	i = 0;
-	while (src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
+	if ((1 / number) > 0)
+		return (false);
+	return (true);
 }

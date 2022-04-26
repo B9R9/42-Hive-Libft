@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newdlist.c                                         :+:      :+:    :+:   */
+/*   ft_strtoupper.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/03 17:44:59 by briffard          #+#    #+#             */
-/*   Updated: 2022/02/03 17:47:03 by briffard         ###   ########.fr       */
+/*   Created: 2022/04/04 08:46:46 by briffard          #+#    #+#             */
+/*   Updated: 2022/04/04 08:47:06 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-dlist	new_dlist(void)
+char	*ft_strtoupper(char *str)
 {
-	return (NULL);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		str[i] = ft_toupper(str[i]);
+		i++;
+	}
+	return (str);
 }

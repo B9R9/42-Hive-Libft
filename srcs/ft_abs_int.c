@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_abs_int.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 13:59:37 by briffard          #+#    #+#             */
-/*   Updated: 2021/12/01 13:59:41 by briffard         ###   ########.fr       */
+/*   Created: 2022/03/31 15:26:36 by briffard          #+#    #+#             */
+/*   Updated: 2022/04/23 16:42:21 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./includes/libft.h"
+#include "libft.h"
 
-void	ft_putstr(char const *s)
+long long int	ft_abs_int(long long value)
 {
-	if (s != NULL)
-		write (1, s, ft_strlen(s));
+	if (value < 0)
+		return (value * -1);
+	return (value);
 }

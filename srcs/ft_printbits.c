@@ -1,21 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dlist_length.c                                     :+:      :+:    :+:   */
+/*   ft_printbits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/03 17:52:33 by briffard          #+#    #+#             */
-/*   Updated: 2022/02/03 17:54:37 by briffard         ###   ########.fr       */
+/*   Created: 2022/04/25 09:41:18 by briffard          #+#    #+#             */
+/*   Updated: 2022/04/25 09:41:19 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	dlist_length(dlist li)
+int	ft_printbits(void *ptr, int size)
 {
-	if (is_empty_dlist(li))
-		return 0;
+	u_int8_t		*data;
+	size_t			count;
+	u_int8_t		i;
+	u_int8_t		lu;
 
-	return li->length;
+	lu = 1;
+	count = 0;
+	data = (u_int8_t *)(ptr) + (size - 1);
+	while ((int)count < size)
+	{
+		i = 0;
+		while (i < 8)
+		{
+			if (*data & (lu << (7 - i)))
+				write (1, "1", 1);
+			else
+				write (1, "0", 1);
+			i++;
+		}
+		write (1, " ", 1);
+		data--;
+		count++;
+	}
+	return (0);
 }

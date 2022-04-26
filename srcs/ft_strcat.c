@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pop_front_dlist.c                                  :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/03 18:57:22 by briffard          #+#    #+#             */
-/*   Updated: 2022/02/03 19:06:16 by briffard         ###   ########.fr       */
+/*   Created: 2021/12/01 14:00:06 by briffard          #+#    #+#             */
+/*   Updated: 2022/04/25 09:44:36 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-dlist		pop_front_dlist(dlist li)
+char	*ft_strcat(char	*s1, char const *s2)
 {
-	t_dlistnode		*temp;
+	size_t	len_s1;
 
-	if (is_empty_dlist(li))
-	{
-		ft_putstr("Nothing to delete\n");
-		return new_dlist();
-	}
-	if (li->begin == li->end)
-	{
-		free(li);
-		li = NULL;
-		return(li);
-	}
-	temp = li->begin;
-	li->begin = li->begin->next;
-	li->begin->back = NULL;
-	temp->next = NULL;
-	temp->back = NULL;
-	free(temp);
-	temp = NULL;
-	li->length--;
-	return(li);
+	len_s1 = ft_strlen(s1);
+	ft_memcpy(s1 + len_s1, s2, ft_strlen(s2));
+	ft_bzero(s1 + len_s1 + ft_strlen(s2), 1);
+	return (s1);
 }

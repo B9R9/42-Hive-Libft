@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pop_back_dlist.c                                   :+:      :+:    :+:   */
+/*   ft_uitoa_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/03 18:47:52 by briffard          #+#    #+#             */
-/*   Updated: 2022/02/03 18:57:07 by briffard         ###   ########.fr       */
+/*   Created: 2022/03/31 15:59:59 by briffard          #+#    #+#             */
+/*   Updated: 2022/04/26 11:40:35 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-dlist		pop_back_dlist(dlist li)
+char	*ft_uitoa_base(unsigned long long number, int base)
 {
-	t_dlistnode		*temp;
+	int		index;
+	char	*str;
 
-	if (is_empty_dlist(li))
+	index = 0;
+	str = ft_strnew(ft_numlenght(number));
+	if (!str)
+		return (NULL);
+	if (number == 0)
 	{
-		ft_putstr("Nothing to delete\n");
-		return new_dlist();
+		ft_strdel(&str);
+		return (ft_strdup("0"));
 	}
-	if (li->begin == li->end)
+	while (number > 0)
 	{
-		free(li);
-		li = NULL;
-		return new_dlist();
+		str[index] = BASE[number % base];
+		number = number / base;
+		index++;
 	}
-	temp = li->end;
-	li->end = li->end->back;
-	li->end->next = NULL;
-	temp->next = NULL;
-	temp->back = NULL;
-	free(temp);
-	temp =NULL;
-	li->length--;
-	return (li);
+	ft_reverse_str(str);
+	return (str);
 }
