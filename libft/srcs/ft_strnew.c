@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdoubleneg.c                                   :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 12:49:12 by briffard          #+#    #+#             */
-/*   Updated: 2022/04/23 16:47:16 by briffard         ###   ########.fr       */
+/*   Created: 2021/12/01 14:06:06 by briffard          #+#    #+#             */
+/*   Updated: 2022/04/12 16:55:59 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isdoubleneg(long double x)
+char	*ft_strnew(size_t size)
 {
-	if ((1 / x) > 0)
-		return (false);
-	return (true);
+	return ((char *)ft_memalloc(size + 1));
 }

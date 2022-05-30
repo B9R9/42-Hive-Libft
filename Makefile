@@ -1,12 +1,12 @@
-#**************************************************************************** #
+# **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: briffard <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: briffard <briffard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/16 08:08:13 by briffard          #+#    #+#              #
-#    Updated: 2022/02/07 14:29:45 by briffard         ###   ########.fr        #
+#    Created: 2022/05/12 08:21:48 by briffard          #+#    #+#              #
+#    Updated: 2022/05/30 15:28:12 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,17 @@ NAME	=	libft.a
 
 #COMPILATION
 CC		=	gcc
-CCFLAGS	=	-Werror -Wextra -Wall -Iincludes  -g
+CCFLAGS	=	-Werror -Wextra -Wall
+
+#INCLUDE
+INCL	= -I ./ft_printf/includes
 
 #CLEAN & FCLEAN
 RM_DIR	=	rm -rf
 RM		=	rm	-f
 
-#SOURCE FILE
-SRC_DIR	=	./srcs/
+#SOURCE FILES
+SRC_DIR	=	./ft_printf/libft/
 FILES	=ft_putchar.c	ft_putchar_fd.c		ft_putendl.c		ft_tolower.c\
 	ft_putendl_fd.c		ft_putnbr.c			ft_putnbr_fd.c		ft_toupper.c\
 	ft_putstr.c			ft_putstr_fd.c		ft_strlen.c			ft_atoi.c	\
@@ -45,28 +48,49 @@ FILES	=ft_putchar.c	ft_putchar_fd.c		ft_putendl.c		ft_tolower.c\
 	ft_charjoin.c 		ft_strtoupper.c		ft_strtoupper.c  \
 	ft_isdoubleneg.c	ft_isintneg.c 		ft_strjoin_replace.c\
 
-#OBJECT FILE
-OBJ_DIR	=	./objectFiles/
-OBJS		=	$(addprefix $(OBJ_DIR), $(FILES:%.c=%.o))
+#FT_PRINTF FILES
+FTPRINTF_DIR 	=	./ft_printf/ft_printf/
+FT_PRINTF_SRC 	=	ft_printf.c												\
+					struct_init.c											\
+					handle_Flag.c error.c									\
+	conv_str.c  conv_int.c conv_uint.c conv_p.c conv_dbl.c 	\
+	conv_void.c												\
+	print_str.c	print_int.c									\
+	handle_sizePrefix_for_flag_d.c							\
+	utils_funct.c utils_print_int.c utils_print_int2.c 		\
+	ft_str_rounding.c 										\
+	bonus.c 												\
+
+#OBJECT FILES
+OBJ_DIR			=	./objectFiles/
+LFT_OBJS		=	$(addprefix $(OBJ_DIR), $(FILES:%.c=%.o))
+FTPRINTF_OBJS	=	$(addprefix $(OBJ_DIR), $(FT_PRINTF_SRC:%.c=%.o))
+
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	@echo "Creation of libft"
-	@ar rcs $(NAME) $(OBJS)
-	@echo "Libft created."
+$(NAME): $(LFT_OBJS) $(FTPRINTF_OBJS)
+	@echo "Creation of libftprintf"
+	@ar rcs $(NAME) $(LFT_OBJS) $(FTPRINTF_OBJS)
+	@echo "Libftprintf created."
 	@ranlib $(NAME)
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.c
 	@mkdir -p $(OBJ_DIR)
-	@$(CC) $(CCFLAGS) -o $@ -c $<
+	@$(CC) $(CCFLAGS) $(INCL) -o $@ -c $<
+
+$(OBJ_DIR)%.o:$(FTPRINTF_DIR)%.c
+	@mkdir -p $(OBJ_DIR)
+	@$(CC) $(CCFLAGS) $(INCL) -o $@ -c $<
 
 clean:
 	@$(RM_DIR) $(OBJ_DIR)
-	@echo "LIBFT: Object Files directory has been deleted"
+	@echo "Object Files directory has been deleted"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "LIBFT: libft.a file has been deleted"
+	@echo "libftprintf.a file has been deleted"
 
-re: fclean all clean
+re: fclean all
+
+.PHONY: all re clean fclean

@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isintneg.c                                      :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/23 16:48:08 by briffard          #+#    #+#             */
-/*   Updated: 2022/04/23 16:49:08 by briffard         ###   ########.fr       */
+/*   Created: 2021/12/01 14:00:06 by briffard          #+#    #+#             */
+/*   Updated: 2022/04/25 09:44:36 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_bool	ft_isintneg(long long int number)
+char	*ft_strcat(char	*s1, char const *s2)
 {
-	if ((1 / number) > 0)
-		return (false);
-	return (true);
+	size_t	len_s1;
+
+	len_s1 = ft_strlen(s1);
+	ft_memcpy(s1 + len_s1, s2, ft_strlen(s2));
+	ft_bzero(s1 + len_s1 + ft_strlen(s2), 1);
+	return (s1);
 }
