@@ -1,171 +1,18 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/briffard/Desktop/libft'
 mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_putchar.o -c srcs/ft_putchar.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_putchar_fd.o -c srcs/ft_putchar_fd.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_putendl.o -c srcs/ft_putendl.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_tolower.o -c srcs/ft_tolower.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_putendl_fd.o -c srcs/ft_putendl_fd.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_putnbr.o -c srcs/ft_putnbr.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_putnbr_fd.o -c srcs/ft_putnbr_fd.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_toupper.o -c srcs/ft_toupper.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_putstr.o -c srcs/ft_putstr.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_putstr_fd.o -c srcs/ft_putstr_fd.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strlen.o -c srcs/ft_strlen.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_atoi.o -c srcs/ft_atoi.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_isalpha.o -c srcs/ft_isalpha.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_itoa.o -c srcs/ft_itoa.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strjoin.o -c srcs/ft_strjoin.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_bzero.o -c srcs/ft_bzero.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_isalnum.o -c srcs/ft_isalnum.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_isascii.o -c srcs/ft_isascii.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_isdigit.o -c srcs/ft_isdigit.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_isprint.o -c srcs/ft_isprint.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_memccpy.o -c srcs/ft_memccpy.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strnew.o -c srcs/ft_strnew.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_memcpy.o -c srcs/ft_memcpy.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_memset.o -c srcs/ft_memset.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strcat.o -c srcs/ft_strcat.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strchr.o -c srcs/ft_strchr.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strcmp.o -c srcs/ft_strcmp.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strcpy.o -c srcs/ft_strcpy.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strdup.o -c srcs/ft_strdup.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strlcat.o -c srcs/ft_strlcat.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strncat.o -c srcs/ft_strncat.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strncmp.o -c srcs/ft_strncmp.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strncpy.o -c srcs/ft_strncpy.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strnstr.o -c srcs/ft_strnstr.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strrchr.o -c srcs/ft_strrchr.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strstr.o -c srcs/ft_strstr.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strequ.o -c srcs/ft_strequ.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strnequ.o -c srcs/ft_strnequ.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strtrim.o -c srcs/ft_strtrim.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_isspace.o -c srcs/ft_isspace.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strclr.o -c srcs/ft_strclr.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strdel.o -c srcs/ft_strdel.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strsub.o -c srcs/ft_strsub.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_striter.o -c srcs/ft_striter.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_striteri.o -c srcs/ft_striteri.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_memalloc.o -c srcs/ft_memalloc.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_memchr.o -c srcs/ft_memchr.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_memcmp.o -c srcs/ft_memcmp.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_memdel.o -c srcs/ft_memdel.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_memmove.o -c srcs/ft_memmove.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strmapi.o -c srcs/ft_strmapi.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strmap.o -c srcs/ft_strmap.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strsplit.o -c srcs/ft_strsplit.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_cleanstr.o -c srcs/ft_cleanstr.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_lstnew.o -c srcs/ft_lstnew.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_lstadd.o -c srcs/ft_lstadd.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_lstdelone.o -c srcs/ft_lstdelone.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_lstdel.o -c srcs/ft_lstdel.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_color.o -c srcs/ft_color.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_putstrcolor.o -c srcs/ft_putstrcolor.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_putcharcolor.o -c srcs/ft_putcharcolor.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_printbits.o -c srcs/ft_printbits.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_numlength.o -c srcs/ft_numlength.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_randomnbr.o -c srcs/ft_randomnbr.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_display_file.o -c srcs/ft_display_file.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_get_next_line.o -c srcs/ft_get_next_line.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_swap.o -c srcs/ft_swap.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_abs_float.o -c srcs/ft_abs_float.c
-mkdir -p ./objectFiles/
+gcc -Werror -Wextra -Wall -I ./includes -o objectFiles/main.o -c ft_printf/main.c
  
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_isupper.o -c srcs/ft_isupper.c
 mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_u_itoa.o -c srcs/ft_u_itoa.c
+gcc -Werror -Wextra -Wall -I ./includes -o objectFiles/conv_str.o -c ft_printf/conv_str.c
 mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_ll_itoa.o -c srcs/ft_ll_itoa.c
+gcc -Werror -Wextra -Wall -I ./includes -o objectFiles/utils.o -c ft_printf/utils.c
 mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_l_itoa.o -c srcs/ft_l_itoa.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_u_short_itoa.o -c srcs/ft_u_short_itoa.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_abs_int.o -c srcs/ft_abs_int.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_uitoa_base.o -c srcs/ft_uitoa_base.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_reversestr.o -c srcs/ft_reversestr.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_charjoin.o -c srcs/ft_charjoin.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strtoupper.o -c srcs/ft_strtoupper.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_isdoubleneg.o -c srcs/ft_isdoubleneg.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_isintneg.o -c srcs/ft_isintneg.c
-mkdir -p ./objectFiles/
-gcc -Werror -Wextra -Wall -Iincludes  -g -o objectFiles/ft_strjoin_replace.o -c srcs/ft_strjoin_replace.c
-echo "Creation of libft"
-ar rcs libft.a ./objectFiles/ft_putchar.o ./objectFiles/ft_putchar_fd.o ./objectFiles/ft_putendl.o ./objectFiles/ft_tolower.o ./objectFiles/ft_putendl_fd.o ./objectFiles/ft_putnbr.o ./objectFiles/ft_putnbr_fd.o ./objectFiles/ft_toupper.o ./objectFiles/ft_putstr.o ./objectFiles/ft_putstr_fd.o ./objectFiles/ft_strlen.o ./objectFiles/ft_atoi.o ./objectFiles/ft_isalpha.o ./objectFiles/ft_itoa.o ./objectFiles/ft_strjoin.o ./objectFiles/ft_bzero.o ./objectFiles/ft_isalnum.o ./objectFiles/ft_isascii.o ./objectFiles/ft_isdigit.o ./objectFiles/ft_isprint.o ./objectFiles/ft_memccpy.o ./objectFiles/ft_strnew.o ./objectFiles/ft_memcpy.o ./objectFiles/ft_memset.o ./objectFiles/ft_strcat.o ./objectFiles/ft_strchr.o ./objectFiles/ft_strcmp.o ./objectFiles/ft_strcpy.o ./objectFiles/ft_strdup.o ./objectFiles/ft_strlcat.o ./objectFiles/ft_strncat.o ./objectFiles/ft_strncmp.o ./objectFiles/ft_strncpy.o ./objectFiles/ft_strnstr.o ./objectFiles/ft_strrchr.o ./objectFiles/ft_strstr.o ./objectFiles/ft_strequ.o ./objectFiles/ft_strnequ.o ./objectFiles/ft_strtrim.o ./objectFiles/ft_isspace.o ./objectFiles/ft_strclr.o ./objectFiles/ft_strdel.o ./objectFiles/ft_strsub.o ./objectFiles/ft_striter.o ./objectFiles/ft_striteri.o ./objectFiles/ft_memalloc.o ./objectFiles/ft_memchr.o ./objectFiles/ft_memcmp.o ./objectFiles/ft_memdel.o ./objectFiles/ft_memmove.o ./objectFiles/ft_strmapi.o ./objectFiles/ft_strmap.o ./objectFiles/ft_strsplit.o ./objectFiles/ft_cleanstr.o ./objectFiles/ft_lstnew.o ./objectFiles/ft_lstadd.o ./objectFiles/ft_lstdelone.o ./objectFiles/ft_lstdel.o ./objectFiles/ft_color.o ./objectFiles/ft_putstrcolor.o ./objectFiles/ft_putcharcolor.o ./objectFiles/ft_printbits.o ./objectFiles/ft_numlength.o ./objectFiles/ft_randomnbr.o ./objectFiles/ft_display_file.o ./objectFiles/ft_get_next_line.o ./objectFiles/ft_swap.o ./objectFiles/ft_abs_float.o ./objectFiles/ft_isupper.o ./objectFiles/ft_u_itoa.o ./objectFiles/ft_ll_itoa.o ./objectFiles/ft_l_itoa.o ./objectFiles/ft_u_short_itoa.o ./objectFiles/ft_abs_int.o ./objectFiles/ft_uitoa_base.o ./objectFiles/ft_reversestr.o ./objectFiles/ft_charjoin.o ./objectFiles/ft_strtoupper.o ./objectFiles/ft_strtoupper.o ./objectFiles/ft_isdoubleneg.o ./objectFiles/ft_isintneg.o ./objectFiles/ft_strjoin_replace.o
-echo "Libft created."
-ranlib libft.a
+gcc -Werror -Wextra -Wall -I ./includes -o objectFiles/bonus.o -c ft_printf/bonus.c
+echo "Creation of libftprintf"
+ar rcs libftprintf.a ./objectFiles/ft_putchar.o ./objectFiles/ft_putchar_fd.o ./objectFiles/ft_putendl.o ./objectFiles/ft_tolower.o ./objectFiles/ft_putendl_fd.o ./objectFiles/ft_putnbr.o ./objectFiles/ft_putnbr_fd.o ./objectFiles/ft_toupper.o ./objectFiles/ft_putstr.o ./objectFiles/ft_putstr_fd.o ./objectFiles/ft_strlen.o ./objectFiles/ft_atoi.o ./objectFiles/ft_isalpha.o ./objectFiles/ft_itoa.o ./objectFiles/ft_strjoin.o ./objectFiles/ft_bzero.o ./objectFiles/ft_isalnum.o ./objectFiles/ft_isascii.o ./objectFiles/ft_isdigit.o ./objectFiles/ft_isprint.o ./objectFiles/ft_memccpy.o ./objectFiles/ft_strnew.o ./objectFiles/ft_memcpy.o ./objectFiles/ft_memset.o ./objectFiles/ft_strcat.o ./objectFiles/ft_strchr.o ./objectFiles/ft_strcmp.o ./objectFiles/ft_strcpy.o ./objectFiles/ft_strdup.o ./objectFiles/ft_strlcat.o ./objectFiles/ft_strncat.o ./objectFiles/ft_strncmp.o ./objectFiles/ft_strncpy.o ./objectFiles/ft_strnstr.o ./objectFiles/ft_strrchr.o ./objectFiles/ft_strstr.o ./objectFiles/ft_strequ.o ./objectFiles/ft_strnequ.o ./objectFiles/ft_strtrim.o ./objectFiles/ft_isspace.o ./objectFiles/ft_strclr.o ./objectFiles/ft_strdel.o ./objectFiles/ft_strsub.o ./objectFiles/ft_striter.o ./objectFiles/ft_striteri.o ./objectFiles/ft_memalloc.o ./objectFiles/ft_memchr.o ./objectFiles/ft_memcmp.o ./objectFiles/ft_memdel.o ./objectFiles/ft_memmove.o ./objectFiles/ft_strmapi.o ./objectFiles/ft_strmap.o ./objectFiles/ft_strsplit.o ./objectFiles/ft_cleanstr.o ./objectFiles/ft_color.o ./objectFiles/ft_putstrcolor.o ./objectFiles/ft_putcharcolor.o ./objectFiles/ft_printbits.o ./objectFiles/ft_numlength.o ./objectFiles/ft_randomnbr.o ./objectFiles/ft_display_file.o ./objectFiles/ft_get_next_line.o ./objectFiles/ft_swap.o ./objectFiles/ft_abs_float.o ./objectFiles/ft_isupper.o ./objectFiles/ft_u_itoa.o ./objectFiles/ft_ll_itoa.o ./objectFiles/ft_l_itoa.o ./objectFiles/ft_u_short_itoa.o ./objectFiles/ft_abs_int.o ./objectFiles/ft_uitoa_base.o ./objectFiles/ft_reversestr.o ./objectFiles/ft_charjoin.o ./objectFiles/ft_strtoupper.o ./objectFiles/ft_strtoupper.o ./objectFiles/ft_isdoubleneg.o ./objectFiles/ft_isintneg.o ./objectFiles/ft_strjoin_replace.o ./objectFiles/main.o ./objectFiles/conv_str.o ./objectFiles/utils.o ./objectFiles/bonus.o
+echo "Libftprintf created."
+ranlib libftprintf.a
+ 
 make: Leaving directory `/Users/briffard/Desktop/libft'
  
